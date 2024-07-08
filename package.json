@@ -1,9 +1,9 @@
 {
   "name": "com.unity.uiextensions",
-  "displayName": "Unity UI Extensions",
-  "version": "2.3.2",
+  "displayName": "Unity UI Extensions forked for ApexMT's Scribe",
+  "version": "2.3.2-apexmt.1.0",
   "description": "An extension project for the Unity3D UI system, all crafted and contributed by the awesome Unity community",
-  "author": "Simon darkside Jackson <@SimonDarksideJ>",
+  "author": "Erwin Mendoza - Apex Mobiletech, Simon darkside Jackson <@SimonDarksideJ>",
   "contributors": [
     {
       "name": "SimonDarksideJ",

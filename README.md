@@ -1,4 +1,6 @@
-# Unity UI Extensions README
+# Unity UI Extensions forked for Apex Mobiletech's Scribe README
+
+Forked version for Apex Mobiletech's Scribe
 
 This is an extension project for the new Unity UI system which can be found at: [Unity UI Source](https://github.com/Unity-Technologies/uGUI)
 
