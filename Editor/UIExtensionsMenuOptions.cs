@@ -229,33 +229,33 @@ namespace UnityEditor.UI
 
 		#region Scroll Snap controls
 		[MenuItem("GameObject/UI/Extensions/Layout/Horizontal Scroll Snap", false)]
-		static public void AddHorizontalScrollSnap(MenuCommand menuCommand)
+		static public void AddScribeHorizontalScrollSnap(MenuCommand menuCommand)
 		{
-			GameObject horizontalScrollSnapRoot = CreateUIElementRoot("Horizontal Scroll Snap", menuCommand, s_ThickGUIElementSize);
+			GameObject ScribeHorizontalScrollSnapRoot = CreateUIElementRoot("Horizontal Scroll Snap", menuCommand, s_ThickGUIElementSize);
 
-			GameObject childContent = CreateUIObject("Content", horizontalScrollSnapRoot);
+			GameObject childContent = CreateUIObject("Content", ScribeHorizontalScrollSnapRoot);
 
 			GameObject childPage01 = CreateUIObject("Page_01", childContent);
 
 			GameObject childText = CreateUIObject("Text", childPage01);
 
 			// Set RectTransform to stretch
-			RectTransform rectTransformScrollSnapRoot = horizontalScrollSnapRoot.GetComponent<RectTransform>();
+			RectTransform rectTransformScrollSnapRoot = ScribeHorizontalScrollSnapRoot.GetComponent<RectTransform>();
 			rectTransformScrollSnapRoot.anchorMin = new Vector2(0.5f, 0.5f);
 			rectTransformScrollSnapRoot.anchorMax = new Vector2(0.5f, 0.5f);
 			rectTransformScrollSnapRoot.anchoredPosition = Vector2.zero;
 			rectTransformScrollSnapRoot.sizeDelta = new Vector2(300f, 150f);
 
 
-			Image image = horizontalScrollSnapRoot.AddComponent<Image>();
+			Image image = ScribeHorizontalScrollSnapRoot.AddComponent<Image>();
 			image.sprite = AssetDatabase.GetBuiltinExtraResource<Sprite>(kBackgroundSpriteResourcePath);
 			image.type = Image.Type.Sliced;
 			image.color = new Color(1f, 1f, 1f, 0.392f);
 
-			ScrollRect sr = horizontalScrollSnapRoot.AddComponent<ScrollRect>();
+			ScrollRect sr = ScribeHorizontalScrollSnapRoot.AddComponent<ScrollRect>();
 			sr.vertical = false;
 			sr.horizontal = true;
-			horizontalScrollSnapRoot.AddComponent<HorizontalScrollSnap>();
+			ScribeHorizontalScrollSnapRoot.AddComponent<ScribeHorizontalScrollSnap>();
 
 			//Setup Content container
 			RectTransform rectTransformContent = childContent.GetComponent<RectTransform>();
@@ -290,7 +290,7 @@ namespace UnityEditor.UI
 
 
 			//Need to add example child components like in the Asset (SJ)
-			Selection.activeGameObject = horizontalScrollSnapRoot;
+			Selection.activeGameObject = ScribeHorizontalScrollSnapRoot;
 		}
 
 		[MenuItem("GameObject/UI/Extensions/Layout/Vertical Scroll Snap", false)]

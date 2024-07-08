@@ -10,7 +10,7 @@ namespace UnityEngine.UI.Extensions
 
     [RequireComponent(typeof(ScrollRect))]
     [AddComponentMenu("Layout/Extensions/Horizontal Scroll Snap")]
-    public class HorizontalScrollSnap : ScrollSnapBase
+    public class ScribeHorizontalScrollSnap : ScrollSnapBase
     {
         private bool updated = true;
 
